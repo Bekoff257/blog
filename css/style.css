@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    /* display: grid;
+    place-items: center;
+    height: 100vh; */
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    height: 80vh;
+}
+
+.blog{
+
+}
+
+.blog-content{
+
+}
+
+form{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    border-radius: 20px;
+    display: none;
+}
+
+.create-blog{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.create-blog h2{
+    font-size: 50px;
+}
+
+
+
+.form-inputs{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+i{
+    cursor: pointer;
+}
+
+.form-inputs input{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.form-about{
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-about input{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+section{
+    padding-top: 20px;
+}
+
+section textarea{
+    padding: 10px;
+    outline: none;
+    border-radius: 15px;
+    resize: none;
+    border: 1px solid gray;
+}
+
+.btn{
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn #create{
+    cursor: pointer;
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background: blue;
+}
+
+
+.btn #create:active{
+    transform: scale(1.1);
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#addBtn{
+    cursor: pointer;
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background: blue;
+}
+
+span{
+    font-style: italic;
+}
+
+.blog-done{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.blog-done h3{
+    padding-top: 10px;
+}
+
+.blog-done p{
+    padding-top: 8px;
+}
+
+.active{
+    display: none;
+}
+
+.blog-done .time{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: gray;
+}
+
+.sec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-done .deleteBtn {
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.blog-done .deleteBtn i{
+    pointer-events: none;
+}
+
+.time{
+    padding-top: 10px;
+}
+
+.dynamic{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.edit{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.edit i{
+    pointer-events: none;
+}
+
+
+.blogmini{
+    word-break: break-all;
+}
+
+.blogTitle{
+    word-break: break-all;
+}
+
+.blogsec{
+    word-break: break-all;
+}
+
+.center{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.done{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.done i{
+    pointer-events: none;
+}
+
+
+.selector{
+    padding-top: 12px;
+}
