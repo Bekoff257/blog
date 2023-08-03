@@ -7,7 +7,7 @@ const createBtn = document.querySelector("#create")
 const clearInp = document.querySelector("#clearInp")
 const clearStrINp = document.querySelector('#clearStrInp')
 const centerH1 = document.querySelector(".center")
-const selectImg = document.querySelector('#select')
+
 
 const blogContainer = document.querySelector("#blog-container")
 
@@ -31,7 +31,6 @@ function blogCreate (e) {
             blogTitle: blogTitleInp.value,
             blogStrInpt: starterTitleInp.value,
             blogareInp: textArea.value,
-            blogImg: selectImg.value,
             blogDate: addZeroToDates(new Date().getDate()),
             blogMonth: addZeroToDates(new Date().getMonth()),
             blogYear: new Date().getFullYear(),
