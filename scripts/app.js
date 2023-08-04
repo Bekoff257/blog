@@ -76,7 +76,7 @@ const render = () => {
             <p class="blogSec">${blog.blogareInp}</p>
             <div class="time">
                 <div>
-                    <p>${blog.blogName}: ${blog.blogHour} : ${blog.blogMinute}</p>
+                    <p>${blog.blogName} <i class="fa-solid fa-circle-check" style="color: #2f75ee;"></i> ${blog.blogHour} : ${blog.blogMinute}</p>
                 </div>
                 <p>${blog.blogDate}/${blog.blogMonth}/${blog.blogYear}</p>
             </div>
