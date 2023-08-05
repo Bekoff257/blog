@@ -50,16 +50,18 @@ function blogCreate (e) {
     }
 }
 
+if(BlogData.length === 0){
+    const msg = document.createElement('div')
+    msg.className = 'warning';
+    msg.textContent = 'No blogs...'
+    blogContainer.appendChild(msg)
+}
+
 const render = () => {
     while(blogContainer.firstChild){
         blogContainer.removeChild(blogContainer.firstChild)
     }
-    if(BlogData.length === 0){
-        const msg = document.createElement('div')
-        msg.className = 'warning';
-        msg.textContent = 'No blogs...'
-        blogContainer.appendChild(msg)
-    }
+    
     BlogData.map((blog, index) => {
         const div = document.createElement('div')
         div.className = 'blog-done'
