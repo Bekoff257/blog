@@ -17,6 +17,7 @@ const checkDoubleIcon = document.querySelector('#checkDouble')
 const timesCircleIcon = document.querySelector('#times')
 const logout = document.querySelector('#logout')
 const log = document.querySelector('.log')
+const pinned = document.querySelector('.pinned')
 
 const blogContainer = document.querySelector("#blog-container")
 
@@ -139,6 +140,7 @@ clearStrINp.addEventListener('click', (e) => {
 })
 
 addBlogBtn.addEventListener('click', () => {
+    pinned.style.display = 'none'
     form.style.display = 'block'
     blogContainer.classList.add('active')
     centerH1.style.display = 'none'
@@ -149,7 +151,13 @@ blogContainer.addEventListener('click', (e) => {
     let t = +index.parentElement.parentElement.dataset.index
     let sibling = index.parentElement.previousElementSibling;
     if(e.target.classList.contains('deleteBtn')){
-        BlogData.splice(t, 1)
+        const asked = window.confirm('Are you sure to Delete your blog?')
+        if(asked){
+            const propmFromUser = prompt("Why you're delete your blog?")
+            if(propmFromUser){
+                BlogData.splice(t, 1)
+            }
+        }
         render()
         setItemsToLocalStorage()
     }else if(index.classList.contains('edit')){
@@ -177,6 +185,7 @@ blogContainer.addEventListener('click', (e) => {
 
 function closeForm (){
     form.style.display = 'none'
+    pinned.style.display = 'block'
 }
 
 
