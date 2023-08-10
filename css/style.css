@@ -11,6 +11,10 @@ body{
     height: 100vh; */
 }
 
+.blogActive{
+    display: grid;
+}
+
 .container{
     display: grid;
     place-items: center;
@@ -18,14 +22,14 @@ body{
 }
 
 .blog{
-
+   display: none;
 }
 
 .blog-content{
-
+    
 }
 
-form{
+#form{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 20px;
     border-radius: 20px;
@@ -94,6 +98,8 @@ section textarea{
     justify-content: flex-end;
 }
 
+
+
 .btn #create{
     cursor: pointer;
     padding: 13px;
@@ -103,6 +109,21 @@ section textarea{
     background: blue;
 }
 
+
+
+.start-blog{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.log{
+    display: none;
+}
+
+#logout{
+    color: blue;
+}
 
 .btn #create:active{
     transform: scale(1.1);
@@ -224,4 +245,78 @@ span{
 
 .selector{
     padding-top: 12px;
+}
+
+.login h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 50%;
+    position: absolute;
+}
+
+#loginForm{
+    width: 400px;
+}
+
+.login-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+}
+
+#nameLogin{
+    margin-top: 5px;
+    width: 100%;
+    border: 1px solid #000;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#pass{
+    margin-top: 5px;
+    width: 100%;
+    border: 1px solid black;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.password{
+    padding-top: 15px;
+}
+
+.loginBtn{
+    margin-top: 20px;
+}
+
+.loginBtn #loginBtn{
+    cursor: pointer;
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background: blue;
+    width: 100%;
+}
+
+.inpName{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.emailInp{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }

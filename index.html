@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog App</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="/fontawesome-free-6.4.0-web/css/all.min.css">
 </head>
 <body>
     <div class="app-container"></div>
@@ -14,12 +15,16 @@
             <h1>BB.<span>blog</span></h1>
         </div>
         <div class="start-blog">
+            <div class="log">
+                <a id="logout" href="">Log Out</a>
+            </div>
             <button id="addBtn">Create Blog <i class="fa-regular fa-pen-to-square fa-lg"></i></button>
         </div>
         
     </div>
-   <div class="center"> <h1>Blogs</h1></div>
+   <!-- <div class="center"> <h1>Blogs</h1></div> -->
     <div class="blog">
+        <div class="center"> <h1>Blogs</h1></div>
         <div class="container">
             <div class="blog-content">
                 <form id="form">
@@ -47,6 +52,28 @@
                 </form>
                 <div id="blog-container" class="blog-container"></div>
             </div>
+        </div>
+    </div>
+    <d  iv id="login" class="login">
+        <h2>Login</h2>
+        <div class="login-content">
+            <form id="loginForm">
+                <div class="name-Input">
+                    <p>Email</p>
+                    <div class="inpName">
+                        <input title="Email" id="nameLogin" type="email" placeholder="Enter your email">
+                    </div>
+                </div>
+                <div class="password">
+                    <p>Password</p>
+                    <div class="emailInp">
+                        <input id="pass" title="Password" type="password" placeholder="Enter your password">
+                    </div>
+                </div>
+                <div class="loginBtn">
+                    <button id="loginBtn" title="Login">Login</button>
+                </div>
+            </form>
         </div>
     </div>
     <script src="/scripts/app.js"></script>

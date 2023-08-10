@@ -1,4 +1,5 @@
 const form = document.querySelector("#form")
+const blog = document.querySelector('.blog')
 const addBlogBtn = document.querySelector("#addBtn")
 const blogTitleInp = document.querySelector("#blogTitle")
 const starterTitleInp = document.querySelector('#st-title')
@@ -7,7 +8,15 @@ const createBtn = document.querySelector("#create")
 const clearInp = document.querySelector("#clearInp")
 const clearStrINp = document.querySelector('#clearStrInp')
 const centerH1 = document.querySelector(".center")
-
+const login = document.querySelector('#login')
+const loginBtn = document.querySelector('#loginBtn')
+const loginForm = document.querySelector('#loginForm')
+const nameLogin = document.querySelector('#nameLogin')
+const pass = document.querySelector('#pass')
+const checkDoubleIcon = document.querySelector('#checkDouble')
+const timesCircleIcon = document.querySelector('#times')
+const logout = document.querySelector('#logout')
+const log = document.querySelector('.log')
 
 const blogContainer = document.querySelector("#blog-container")
 
@@ -15,17 +24,47 @@ form.addEventListener('submit', blogCreate)
 
 let BlogData = []
 
-let askName = ""
+// let askName = ""
+
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+})
+
+logout.addEventListener('click', (e) => {
+    e.preventDefault()
+    login.style.display = 'block'
+    blog.style.display = 'none'
+    log.style.display = 'none'
+})
+
+function showBlogsByAdminPassAndEmail (){
+    blog.style.display = 'block'
+    login.style.display = 'none'
+    log.style.display = 'block'
+
+    localStorage.setItem('logined', true)
+}
+
+loginBtn.addEventListener('click', (e) => {
+    if(nameLogin.value === "admin@gmail.com" && pass.value === "admin123"){
+        nameLogin.style.borderColor = 'green'
+        pass.style.borderColor = 'green'
+        showBlogsByAdminPassAndEmail()
+    }else{
+        nameLogin.style.borderColor = 'red'
+        pass.style.borderColor = 'red'
+    }
+})
 
 function blogCreate (e) {
     e.preventDefault()
-    if(!askName){
-        askName = prompt("Please enter your name: ")
-        if(!askName){
-            return;
-        }
-        setItemsToLocalStorage()
-    }
+    // if(!askName){
+    //     askName = prompt("Please enter your name: ")
+    //     if(!askName){
+    //         return;
+    //     }
+    //     setItemsToLocalStorage()
+    // }
     if(blogTitleInp.value && starterTitleInp.value && textArea.value.trim().length > 0){
         const blogData = {
             blogTitle: blogTitleInp.value,
@@ -36,7 +75,7 @@ function blogCreate (e) {
             blogYear: new Date().getFullYear(),
             blogHour: addZeroToDates(new Date().getHours()),   
             blogMinute: addZeroToDates(new Date().getMinutes()),
-            blogName: askName,
+            blogName: nameLogin.value = "Admin",
             taskEdited: false
         }
         BlogData.unshift(blogData);
@@ -154,6 +193,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if(ls){
         BlogData = JSON.parse(ls)
         render()
+    }
+
+    const isLogged = localStorage.getItem('logined')
+    if(isLogged === 'true'){
+        showBlogsByAdminPassAndEmail()
     }
 })
 
