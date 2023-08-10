@@ -367,3 +367,29 @@ span{
     /* color: #2f75ee; */
     color: goldenrod;
 }
+
+@media (max-width: 900px){
+    #form{
+        width: 400px;
+    }
+
+    section textarea{
+        width: 100%;
+    }
+
+    .blog-done{
+        width: 400px;
+    }
+
+    .pinned{
+        margin-left: 7px;
+    }
+
+    .pmain p{
+        font-size: 13px;
+    }
+
+    #loginForm{
+        width: 300px;
+    }
+}
