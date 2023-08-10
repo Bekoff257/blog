@@ -47,14 +47,15 @@ function showBlogsByAdminPassAndEmail (){
 }
 
 loginBtn.addEventListener('click', (e) => {
-    if(nameLogin.value === "admin@gmail.com" && pass.value === "admin123"){
-        nameLogin.style.borderColor = 'green'
-        pass.style.borderColor = 'green'
-        showBlogsByAdminPassAndEmail()
-    }else{
-        nameLogin.style.borderColor = 'red'
-        pass.style.borderColor = 'red'
-    }
+    // if(nameLogin.value === "admin@gmail.com" && pass.value === "admin123"){
+    //     nameLogin.style.borderColor = 'green'
+    //     pass.style.borderColor = 'green'
+    //     showBlogsByAdminPassAndEmail()
+    // }else{
+    //     nameLogin.style.borderColor = 'red'
+    //     pass.style.borderColor = 'red'
+    // }
+    showBlogsByAdminPassAndEmail()
 })
 
 function blogCreate (e) {
@@ -76,7 +77,8 @@ function blogCreate (e) {
             blogYear: new Date().getFullYear(),
             blogHour: addZeroToDates(new Date().getHours()),   
             blogMinute: addZeroToDates(new Date().getMinutes()),
-            blogName: nameLogin.value = "Admin",
+            // blogName: nameLogin.value = "Admin",
+            blogName: nameLogin.value,
             taskEdited: false
         }
         BlogData.unshift(blogData);
